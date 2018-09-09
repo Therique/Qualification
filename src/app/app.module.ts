@@ -6,10 +6,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
+import { FuncionarioComponent } from './funcionario/funcionario.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FuncionarioComponent
   ],
   imports: [
     BrowserModule,
