@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { FuncionarioComponent } from './funcionario/funcionario.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +17,18 @@ import { HomeComponent } from './home/home.component';
     FuncionarioComponent,
     HeaderComponent,
     HomeComponent,
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule,
-    NgbModule
+    NgbModule,
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
