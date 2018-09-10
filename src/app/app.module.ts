@@ -11,7 +11,7 @@ import { FuncionarioComponent } from './funcionario/funcionario.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FuncionarioComponent
+    FuncionarioComponent,
   ],
   imports: [
     BrowserModule,
