@@ -1,27 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'qualit-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 
-  template: `
-  <button (click)="onClickMe()">Click me!</button>
-  {{clickMessage}}`
-
-
 })
 export class HomeComponent implements OnInit {
   clickMessage = '';
+  title = 'Qualificão';
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-
-  onClickMe() {
-    this.clickMessage = 'You are my hero!';
   }
 
 }
