@@ -9,6 +9,4 @@ export const ROUTES: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'funcionarioListar', component: FuncionarioComponent },
     { path: 'funcionario', component: FuncionarioComponent }
-
-
 ];

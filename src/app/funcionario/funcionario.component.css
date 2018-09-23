@@ -3,20 +3,40 @@
     margin: 30px;
 }
 
+.IptSearch{
+    padding-right: 50px;
+    padding-left: 50px; 
+}
+
 .cabecalho{
     text-align: center;
     margin: 30px;
-
-   
 }
 
 h5{
     margin-bottom: 30px;
-
 }
 
 .qualificacao{
     padding: 10px;
     text-align: center;
+}
+/* ---------------------------------- */
 
+.star-wrapper {
+    width: 180px;
+    height: 40px;
+    border: 1px solid #ccf;
+}
+.star {
+    width: 35px;
+    height: 30px;
+    overflow: hidden;
+    float: left;
+}
+.star img {
+    height: 30px;
+}
+.full img {
+    margin-left: -40px;
 }
