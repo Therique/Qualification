@@ -1,10 +1,22 @@
 
-.container{
-    margin-top: 50px;
+.form-group-groupo{
+    margin: 30px;
 }
 
 .cabecalho{
-align-content: center;
+    text-align: center;
+    margin: 30px;
 
    
+}
+
+h5{
+    margin-bottom: 30px;
+
+}
+
+.qualificacao{
+    padding: 10px;
+    text-align: center;
+
 }

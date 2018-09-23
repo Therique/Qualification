@@ -1,5 +1,6 @@
-<div class="container">
-  <div class="row ">
+<div class="container corpo">
+
+  <div class="cabecalho ">
     <h1 class="cabecalho">Cadastro Funcionario</h1>
   </div>
 
@@ -11,38 +12,42 @@
     <div class="form-group col-md-4">
       <input type="text" class="form-control" placeholder="Cpf">
     </div>
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-3">
       <input type="text" class="form-control" placeholder="Rg">
     </div>
 
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-3">
       <select id="inputState" class="form-control">
         <option selected>Orgão Expeditor</option>
         <option>...</option>
       </select>
     </div>
 
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-3">
       <input type="text" class="form-control" placeholder="Data Nascimento">
     </div>
 
-    <div class="form-group col-md-8">
-      <input type="text" class="form-control" placeholder="Nome Mae">
-    </div>
-
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-3">
       <select id="inputState" class="form-control">
         <option selected>Sexo</option>
         <option>...</option>
       </select>
     </div>
 
-    <div class="form-group col-md-8">
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control" placeholder="Nome Mae">
+    </div>
+
+    <div class="form-group col-md-6">
       <input type="text" class="form-control" placeholder="Nome Pai">
     </div>
 
     <div class="form-group col-md-8">
       <input type="text" class="form-control" id="inputAddress" placeholder="Endereço">
+    </div>
+
+    <div class="form-group col-md-4">
+      <input type="text" class="form-control" placeholder="Cep">
     </div>
 
     <div class="form-group col-md-4">
@@ -60,21 +65,49 @@
       <input type="text" class="form-control" id="inputAddress2" placeholder="Bairro">
     </div>
 
-    <div class="form-group col-md-4">
-      <input type="text" class="form-control" placeholder="Cep">
-    </div>
+
 
     <div class="form-group col-md-6">
       <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
     </div>
 
     <div class="form-group col-md-3">
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Telefone">
-      </div>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Telefone">
+    </div>
 
-      <div class="form-group col-md-3">
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Celular">
-        </div>
+    <div class="form-group col-md-3">
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Celular">
+    </div>
 
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+    <div class="form-group qualificacao col-md-12">
+      <h5>Minhas Qualificações</h5>
+
+      <button type="button" class="btn btn-outline-primary button qualificacao" data-toggle="modal" data-target="#exampleModal">Adicionar Qualificações</button>
+
+    </div>
   </div>
+  <button type="submit" class="btn btn-primary">Cadastrar</button>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
