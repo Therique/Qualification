@@ -1,5 +1,5 @@
 
-footer {
+/* footer {
     width:100%;
     color: white;
     position:absolute;
@@ -21,4 +21,20 @@ a{
     float: left;
     font-size: 20px;
     margin-top: 2px;
+} */
+
+footer {
+  background: #007bff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-logo {
+    margin-top: 16px;
+    /* float: right; */
+}
+
+.footer-logo p {
+    color: white;
 }

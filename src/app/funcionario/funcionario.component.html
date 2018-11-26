@@ -1,3 +1,9 @@
+<style>
+  /* .btnEnviar{
+    margin-left: 10px;
+  } */
+</style>
+
 <div class="container corpo">
 
   <div class="cabecalho ">
@@ -7,13 +13,13 @@
 
   <div class="form-row">
     <div class="form-group col-md-8">
-      <input type="text" class="form-control" placeholder="Nome">
+      <input type="text" class="form-control txtNome" placeholder="Nome">
     </div>
     <div class="form-group col-md-4">
-      <input type="text" class="form-control" placeholder="Cpf">
+      <input type="text" class="form-control txtCpf" placeholder="Cpf">
     </div>
     <div class="form-group col-md-3">
-      <input type="text" class="form-control" placeholder="Rg">
+      <input type="text" class="form-control txtRg" placeholder="Rg">
     </div>
 
     <div class="form-group col-md-3">
@@ -24,7 +30,7 @@
     </div>
 
     <div class="form-group col-md-3">
-      <input type="text" class="form-control" placeholder="Data Nascimento">
+      <input type="text" class="form-control" placeholder="Data Nascimento" id="datepicker">
     </div>
 
     <div class="form-group col-md-3">
@@ -35,34 +41,38 @@
     </div>
 
     <div class="form-group col-md-6">
-      <input type="text" class="form-control" placeholder="Nome Mae">
+      <input type="text" class="form-control txtNomeMae" placeholder="Nome Mae">
     </div>
 
     <div class="form-group col-md-6">
-      <input type="text" class="form-control" placeholder="Nome Pai">
+      <input type="text" class="form-control txtNomePai" placeholder="Nome Pai">
     </div>
 
     <div class="form-group col-md-8">
-      <input type="text" class="form-control" id="inputAddress" placeholder="Endereço">
+      <input type="text" class="form-control txtEndereco" id="inputAddress" placeholder="Endereço">
     </div>
 
     <div class="form-group col-md-4">
-      <input type="text" class="form-control" placeholder="Cep">
+      <input type="text" class="form-control txtCep" placeholder="Cep">
+    </div>
+    
+    <div class="form-group col-md-4">
+      <input type="text" class="form-control txtEstado" id="inputAddress2" placeholder="Estado">
     </div>
 
-    <div class="form-group col-md-4">
+    <!-- <div class="form-group col-md-4">
       <select id="inputState" class="form-control">
         <option selected>Estado</option>
         <option>...</option>
       </select>
+    </div> -->
+
+    <div class="form-group col-md-4">
+      <input type="text" class="form-control txtCidade" id="inputAddress2" placeholder="Cidade">
     </div>
 
     <div class="form-group col-md-4">
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Cidade">
-    </div>
-
-    <div class="form-group col-md-4">
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Bairro">
+      <input type="text" class="form-control txtBairro" id="inputAddress2" placeholder="Bairro">
     </div>
 
 
@@ -72,21 +82,26 @@
     </div>
 
     <div class="form-group col-md-3">
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Telefone">
+      <input type="email" class="form-control txtTelefone" id="inputEmail4" placeholder="Telefone">
     </div>
 
     <div class="form-group col-md-3">
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Celular">
+      <input type="email" class="form-control txtTelefone" id="inputEmail4" placeholder="Celular">
     </div>
 
-
-    <div class="form-group qualificacao col-md-12">
-      <h5>Minhas Qualificações</h5>
-
-      <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Cadastrar Qualificação</button>
+  
+    <div class="row  offset-md-8">
+      <div class="col-md-6 col">
+          <button class="btn btn-success" (click)="open(content)">Cadastrar Qualificação</button>       
+      </div>
+      <div class="col-md-1 btnForm">
+          <button id="enviar" name="enviar" class="btn btn-primary btnEnviar">Cadastrar Funcionario</button>          
+      </div>
     </div>
+    
+ 
   </div>
-  <button type="submit" class="btn btn-primary">Cadastrar</button>
+  <!-- <button type="submit" class="btn btn-primary">Cadastrar</button> -->
 </div>
 
 <ng-template #content let-c="close" let-d="dismiss">
@@ -125,7 +140,8 @@
         </li>
 
   </div>
-  <div class="modal-footer">
+  
+  <!-- <div class="modal-footer">
     <button type="button" class="btn btn-outline-primary" (click)="c('Save click')">Save</button>
-  </div>
+  </div> -->
 </ng-template>
