@@ -13,6 +13,11 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+
+  listMe( ){
+   // return this.listMe. ;
+   } 
+
   ngOnInit() {
   }
 

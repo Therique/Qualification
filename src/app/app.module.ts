@@ -12,7 +12,6 @@ import { FuncionarioComponent } from './funcionario/funcionario.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
-import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { ListarComponent } from './listar/listar.component';
 
@@ -23,7 +22,6 @@ import { ListarComponent } from './listar/listar.component';
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    LoginComponent,
     AboutComponent,
     ListarComponent,
   ],
