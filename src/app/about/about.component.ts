@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   // tslint:disable-next-line:component-selector
   selector: 'qualit-about',
   templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
 
