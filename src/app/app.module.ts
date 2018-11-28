@@ -4,6 +4,7 @@ import {HttpModule} from '@angular/http';
 import {RouterModule} from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule} from '@angular/forms';
 
 import {ROUTES} from './app.routes';
 
@@ -30,6 +31,8 @@ import { ListarComponent } from './listar/listar.component';
     HttpModule,
     RouterModule.forRoot(ROUTES),
     NgbModule,
+    FormsModule,
+
   ],
   providers: [
     NgbModalConfig, NgbModal

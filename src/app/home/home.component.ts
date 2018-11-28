@@ -10,13 +10,16 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   clickMessage = '';
   title = 'Qualificacão';
+  router: any;
 
   constructor() { }
 
 
-  listMe( ){
-   // return this.listMe. ;
-   } 
+  listMe(){
+  // alert('ABRE PORRA');
+  this.router.navigate(['/funcionario']);
+  
+}
 
   ngOnInit() {
   }
