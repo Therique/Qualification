@@ -55,7 +55,7 @@
     <div class="form-group col-md-4">
       <input type="text" class="form-control txtCep" placeholder="Cep">
     </div>
-    
+
     <div class="form-group col-md-4">
       <input type="text" class="form-control txtEstado" id="inputAddress2" placeholder="Estado">
     </div>
@@ -82,17 +82,17 @@
       <input type="email" class="form-control txtTelefone" id="inputEmail4" placeholder="Celular">
     </div>
 
-  
+
     <div class="row  offset-md-8">
       <div class="col-md-6 col">
-          <button class="btn btn-success" (click)="open(content)">Cadastrar Qualificação</button>       
+        <button class="btn btn-success" (click)="open(content)">Cadastrar Qualificação</button>
       </div>
       <div class="col-md-1 btnForm">
-          <button id="enviar" name="enviar" class="btn btn-primary btnEnviar">Cadastrar Funcionario</button>          
+        <button id="enviar" name="enviar" class="btn btn-primary btnEnviar">Cadastrar Funcionario</button>
       </div>
     </div>
-    
- 
+
+
   </div>
   <!-- <button type="submit" class="btn btn-primary">Cadastrar</button> -->
 </div>
@@ -106,34 +106,37 @@
   </div>
   <div class="modal-body">
 
-      <!-- <img [src]="selectLinguagemImagem" *ngIf="selectedLinguagem !== null"> -->
+    <!-- <img [src]="selectLinguagemImagem" *ngIf="selectedLinguagem !== null"> -->
 
-      <ul *ngFor="let linguagem of linguagens" (mouseenter)=selectLinguagem(linguagem)>
-          <div class="form-group form-check">
-             <img  [src]="selectLinguagemImagem" >
-              <label class="form-check-label" for="exampleCheck1"><strong>{{linguagem.nome}}</strong></label>
-              <div class="star-wrapper">
-                <div class="star">
-                  <img src="http://i.stack.imgur.com/AtiAi.png" alt="" />
-                </div>
-                <div class="star">
-                  <img src="http://i.stack.imgur.com/AtiAi.png" alt="" />
-                </div>
-                <div class="star">
-                  <img src="http://i.stack.imgur.com/AtiAi.png" alt="" />
-                </div>
-                <div class="star">
-                  <img src="http://i.stack.imgur.com/AtiAi.png" alt="" />
-                </div>
-                <div class="star">
-                  <img src="http://i.stack.imgur.com/AtiAi.png" alt="" />
-                </div>
-              </div>
+    <ul *ngFor="let linguagem of linguagens" (mouseenter)=selectLinguagem(linguagem)>
+      <div class="form-group form-check">
+          <img [src]="selectLinguagemImagem">
+
+        <div>
+          <label class="form-check-label" for="exampleCheck1"><strong>{{linguagem.nome}}</strong></label>
+          <div class="star-wrapper">
+            <div class="star">
+              <img src="http://i.stack.imgur.com/AtiAi.png" alt="" />
             </div>
-          </ul>
+            <div class="star">
+              <img src="http://i.stack.imgur.com/AtiAi.png" alt="" />
+            </div>
+            <div class="star">
+              <img src="http://i.stack.imgur.com/AtiAi.png" alt="" />
+            </div>
+            <div class="star">
+              <img src="http://i.stack.imgur.com/AtiAi.png" alt="" />
+            </div>
+            <div class="star">
+              <img src="http://i.stack.imgur.com/AtiAi.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
 
   </div>
-  
+
   <!-- <div class="modal-footer">
     <button type="button" class="btn btn-outline-primary" (click)="c('Save click')">Save</button>
   </div> -->

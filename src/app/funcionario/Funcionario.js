@@ -1,5 +1,3 @@
-
-
 $(function () {
     var estrelas = $('.star');
     var escolhida = 0;

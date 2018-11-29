@@ -1,4 +1,3 @@
-
 <div class="container">
 
   <div class="cabecalho">
@@ -6,38 +5,33 @@
 
     <div class="row">
       <div class="input-group col-md-6 offset-md-3">
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Buscar">
-      </div>      
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Buscar">
+      </div>
     </div>
   </div>
 
+  <!-- <ul *ngFor="let funcionario of funcionarios">
+      <label class="form-check-label" for="exampleCheck1"><strong>{{funcionario.nome}}</strong></label>
+  </ul> -->
   <table class="table">
     <thead class="thead-light  teste">
       <tr>
         <th scope="col">Código</th>
         <th scope="col">Nome</th>
+        <th scope="col">Cpf</th>
         <th scope="col">Empresa / Setor</th>
-        <th scope="col">Função</th>
+        <th scope="col">açao</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody *ngFor="let funcionario of funcionarios">
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+        <td>{{funcionario.id}}</td>
+        <td>{{funcionario.nome}}</td>
+        <td>{{funcionario.cpf}}</td>
+        <td>{{funcionario.cpf}}</td>
+        <button type="button" class="btn btn-outline-primary button" routerLink="/listar">Detalhar</button>
+        <button type="button" class="btn btn-outline-info button" routerLink="/listar">editar </button>
+        <button type="button" class="btn btn-outline-danger button" routerLink="/listar">Excluir </button>
       </tr>
     </tbody>
   </table>
