@@ -60,13 +60,6 @@
       <input type="text" class="form-control txtEstado" id="inputAddress2" placeholder="Estado">
     </div>
 
-    <!-- <div class="form-group col-md-4">
-      <select id="inputState" class="form-control">
-        <option selected>Estado</option>
-        <option>...</option>
-      </select>
-    </div> -->
-
     <div class="form-group col-md-4">
       <input type="text" class="form-control txtCidade" id="inputAddress2" placeholder="Cidade">
     </div>
@@ -113,11 +106,12 @@
   </div>
   <div class="modal-body">
 
-      <li *ngFor="let linguagem of liguagens">
+      <!-- <img [src]="selectLinguagemImagem" *ngIf="selectedLinguagem !== null"> -->
 
+      <ul *ngFor="let linguagem of linguagens" (mouseenter)=selectLinguagem(linguagem)>
           <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">{{linguagem}}</label>
+             <img  [src]="selectLinguagemImagem" >
+              <label class="form-check-label" for="exampleCheck1"><strong>{{linguagem.nome}}</strong></label>
               <div class="star-wrapper">
                 <div class="star">
                   <img src="http://i.stack.imgur.com/AtiAi.png" alt="" />
@@ -136,8 +130,7 @@
                 </div>
               </div>
             </div>
-        
-        </li>
+          </ul>
 
   </div>
   
