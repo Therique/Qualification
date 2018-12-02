@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FuncionarioService } from './../services/funcionario.service';
 
+import { FuncionarioService } from './../services/funcionario.service';
 
 @Component({
   selector: 'qualit-listar',
@@ -14,14 +14,28 @@ import { FuncionarioService } from './../services/funcionario.service';
 })
 export class ListarComponent implements OnInit {
 
-  funcionarios = [];
+  searchFilter = '';
+  funcionarios: any[];
 
-  constructor(private funcionarioService: FuncionarioService) {
-    this.funcionarios = this.funcionarioService.getFuncionario();
-   // console.log(this.funcionarioService.getFuncionario());
-   }
+
+  constructor(
+    private funcionarioService: FuncionarioService) {
+
+    //  this.funcionarios = this.funcionarioService.listAll(this.searchFilter);
+  }
+
+
 
   ngOnInit() {
+    this.funcionarioList();
   }
+
+
+  get funcionarioList() {
+
+    return this.funcionarioService.listAll(this.searchFilter);
+  }
+
+
 
 }

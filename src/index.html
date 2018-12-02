@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Qualification</title>
@@ -17,100 +18,86 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 
   <script type="text/javascript">
-  //debugger
-    $(window).load(function(){
-     
-    onlyName();
-    onlNumber();
-    disableFields();
-    mascara();  
+    //debugger
+    $(window).load(function () {
+      onlyName();
+      onlNumber();
+      disableFields();
+      mascara();
 
-     $(".txtCep").blur(function() {
-   
+      $(".txtCep").blur(function () {
 
-     var cep = $(this).val().replace(/\D/g, '');
+        var cep = $(this).val().replace(/\D/g, '');
 
+        if (cep != "") {
 
-      if (cep != "") {
+          var validacep = /^[0-9]{8}$/;
 
-    
-     var validacep = /^[0-9]{8}$/;
+          if (validacep.test(cep)) {
 
-    if(validacep.test(cep)) {
+            $(".txtEndereco").val("...");
+            $(".txtBairro").val("...");
+            $(".txtCidade").val("...");
+            $(".txtEstado").val("...");
 
-        
-        $(".txtEndereco").val("...");
-        $(".txtBairro").val("...");
-        $(".txtCidade").val("...");
-        $(".txtEstado").val("...");
-       
-       
-        $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+            $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
 
-            if (!("erro" in dados)) {
-                
+              if (!("erro" in dados)) {
+
                 $(".txtEndereco").val(dados.logradouro);
                 $(".txtBairro").val(dados.bairro);
                 $(".txtCidade").val(dados.localidade);
                 $(".txtEstado").val(dados.uf);
-                
-            } 
-            else {
-                
-              clearFormCep();
+              }
+              else {
+                clearFormCep();
                 alert("CEP não encontrado.");
-            }
-        });
-    } 
-    else {
-        
-      clearFormCep();
-        alert("Formato de CEP inválido.");
-    }
-} 
-else {
-    
-  clearFormCep()
-}
-});
-
-
+              }
+            });
+          }
+          else {
+            clearFormCep();
+            alert("Formato de CEP inválido.");
+          }
+        }
+        else {
+          clearFormCep()
+        }
+      });
     });
 
-    function onlyName(){
-      $('.txtNome,.txtNomeMae,.txtNomePai,.txtCidade,.txtBairro').keyup(function () { 
-      this.value = this.value.replace(/[^A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]/g,'');
+    function onlyName() {
+      $('.txtNome,.txtNomeMae,.txtNomePai,.txtCidade,.txtBairro').keyup(function () {
+        this.value = this.value.replace(/[^A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]/g, '');
       });
     }
 
-    function onlNumber(){
-      $('.txtTelefone,.txtCelular,.txtCpf,.txtRg').keyup(function() {
-     $(this).val(this.value.replace(/\D/g, ''));
-});
-}
+    function onlNumber() {
+      $('.txtTelefone,.txtCelular,.txtCpf,.txtRg').keyup(function () {
+        $(this).val(this.value.replace(/\D/g, ''));
+      });
+    }
 
+    function clearFormCep() {
+      $(".txtEndereco").val("");
+      $(".txtBairro").val("");
+      $(".txtCidade").val("");
+      $(".txtEstado").val("");
+    }
 
-  function clearFormCep(){
-       $(".txtEndereco").val("");
-       $(".txtBairro").val("");
-       $(".txtCidade").val("");
-       $(".txtEstado").val("");
-
-     }
-
-     function disableFields(){
-      $(".txtEndereco").prop("disabled", true);      
+    function disableFields() {
+      $(".txtEndereco").prop("disabled", true);
       $(".txtBairro").prop("disabled", true);
       $(".txtCidade").prop("disabled", true);
       $(".txtEstado").prop("disabled", true);
-      
-     }
+    }
 
   </script>
- 
 
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
 </html>
